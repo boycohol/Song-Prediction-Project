@@ -49,8 +49,3 @@ The data this week comes from Spotify via the [`spotifyr` package](https://www.r
   - 5 points - ML: As we don't have a course dedicated to recommending systems using machine learning models, you'll have to do a bit of research
   - DL: you will be able to draw inspiration from the models we have seen in the deep learning course
   - You will be assessed primarily on the relevance of your approach, based on the justification of your choices
-
-- Submit only 1 zip file, before the end of this year (31.12.2024)
-  - With 1 notebook for machine learning
-  - With 1 notebook for deep learning
-  - 1 csv files with your popularity prediction score. 3 columns: `Unnamed: 0`, ML prediction, DL prediction
