@@ -32,20 +32,58 @@ The data this week comes from Spotify via the [`spotifyr` package](https://www.r
 | tempo                    | double    | The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.                                                                                                                                                                                                                                                                                                                         |
 | duration_ms              | double    | Duration of song in milliseconds                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-## Tasks
 
-- All the data comes from spotify
+## Installation
+- To run this project, first you need to install this packages:
 
-- Task 1: Predict ’popularity’ with a Machine Learning model and with a Deep Learning model
+  - pandas
+  - numpy
+  - scikit-learn
+  - tensorflow
+  - matplotlib
+  - seaborn
 
-  - 13 points - for Machine Learning model, you can use all model learned in lecture.
-  - 13 points - for Deep Learning model, reuse all kind of existing layers.
-  - You will be assessed primarily on the quality of the pipeline you have implemented, the quality of your explanations
-  - 2 points will be based on the model performance on the test set – metric=MeanSquaredLogarithmicError
+## Features
 
-- Task 2 : Build a recommender systems with a Machine Learning approach and with a Deep Learning approach.
+### 1. Predict `popularity` with a Machine Learning model and with a Deep Learning model
+- For both approaches, first, perform exploratory data analysis (EDA) to understand the data and preprocess it accordingly.
+- Split the data into training and testing sets.
 
-  - Suggest 5 tracks to listen to based on 5 tracks that a user has liked
-  - 5 points - ML: As we don't have a course dedicated to recommending systems using machine learning models, you'll have to do a bit of research
-  - DL: you will be able to draw inspiration from the models we have seen in the deep learning course
-  - You will be assessed primarily on the relevance of your approach, based on the justification of your choices
+#### 1.1. Machine Learning:
+  - Use regression models such as **Linear Regression, Decision Trees, Random Forest, SVR** to predict the popularity of a track based on its features.
+  - Perform hyperparameter tuning using **Random Search**.
+<div align='center'>
+<img src="./img/regression architecture.png" alt="Regression Architecture" width="1000">
+</div>
+
+  - Evaluate the model using metrics **Mean Absolute Error (MAE), Mean Squared Error (MSE) and R-squared (R²)**.
+#### 1.2. Deep Learning:
+  - Build a neural network using frameworks like TensorFlow or Keras to predict track popularity.
+  - Experiment with different architectures, activation functions, and optimization algorithms.
+<div align="center" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+  <div style="display: inline-block; text-align: center; margin: 10px;">
+    <img src="./img/cnn.png" width="600"/>
+    <p><strong>CNN Architecture</strong></p>
+  </div>
+
+  <div style="display: inline-block; text-align: center; margin: 10px;">
+    <img src="./img/mlp.png" width="600"/>
+    <p><strong>MLP Architecture</strong></p>
+  </div>
+</div>
+
+  - Evaluate the model using the same metrics as above.
+
+### 2. Build a recommender systems with a Machine Learning approach and with a Deep Learning approach.
+Suggest 5 tracks to listen to based on 5 tracks that a user has liked
+#### 2.1. Machine Learning:
+  - Use collaborative filtering and content-based filtering techniques to build a recommendation system.
+  - Evaluate the recommender system based on the return songs.
+#### 2.2. Deep Learning:
+  - Build a neural network-based recommender system using Deep and Wide Architecture ([link](https://arxiv.org/abs/1606.07792)).
+  <div align='center'>
+<img src="./img/deep_wide_arch.png" alt="Deep and Wide Architecture" width="600">
+</div>
+
+  - Experiment with different architectures and hyperparameters.
+  - Evaluate the recommender system using the same metrics as above.
